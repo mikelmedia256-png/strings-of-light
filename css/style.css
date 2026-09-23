@@ -581,3 +581,9 @@ figcaption span{ color:var(--muted); }
   .wdiv svg{ clip-path:none; opacity:1 }
   .reveal{ opacity:1; transform:none }
 }
+
+/* ---------- client revisions (Sep 2026) ---------- */
+.quotes--2{ grid-template-columns:repeat(2,1fr); max-width:60rem; }
+.consult{ margin:1.6rem 0 0; }
+#occasions .finep b{ color:var(--gold-lt); font-weight:400; }
+@media (max-width:1000px){ .quotes--2{ grid-template-columns:1fr; } }
