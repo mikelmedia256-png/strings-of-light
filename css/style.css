@@ -587,3 +587,18 @@ figcaption span{ color:var(--muted); }
 .consult{ margin:1.6rem 0 0; }
 #occasions .finep b{ color:var(--gold-lt); font-weight:400; }
 @media (max-width:1000px){ .quotes--2{ grid-template-columns:1fr; } }
+
+/* ---------- B&W gallery ---------- */
+.gal{
+  max-width:var(--wrap); margin:0 auto;
+  display:grid; grid-template-columns:repeat(4,1fr); gap:clamp(.5rem,1.2vw,1rem);
+}
+.gal__i{ margin:0; overflow:hidden; background:var(--ink); aspect-ratio:9/16; }
+.gal__i--lead{ grid-column:span 2; grid-row:span 2; aspect-ratio:auto; }
+.gal__i picture,.gal__i img{ display:block; width:100%; height:100%; }
+.gal__i img{ object-fit:cover; object-position:center 30%; transition:transform 1.2s var(--ease); }
+.gal__i:hover img{ transform:scale(1.03); }
+@media (max-width:640px){
+  .gal{ grid-template-columns:repeat(2,1fr); }
+  .gal__i--lead{ grid-row:auto; aspect-ratio:9/14; }
+}
